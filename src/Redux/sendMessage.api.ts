@@ -13,7 +13,8 @@ export const sendMessageApi = createApi({
                 {
                     url: `/SendMessage/${localStorage.getItem('apiTokenInstance')}`,
                     method: "POST",
-                    body
+                    body,
+                    mode: 'cors',
                 }
 
             ),

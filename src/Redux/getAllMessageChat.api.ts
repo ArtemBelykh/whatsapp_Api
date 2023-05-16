@@ -13,7 +13,8 @@ export const getAllMessageChatApi = createApi({
                 {
                     url: `/GetChatHistory/${localStorage.getItem('apiTokenInstance')}`,
                     method: "POST",
-                    body
+                    body,
+                    mode: 'cors',
                 }
             ),
             providesTags: ['getAll']

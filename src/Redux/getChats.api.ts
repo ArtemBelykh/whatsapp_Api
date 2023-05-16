@@ -11,7 +11,7 @@ export const getChatsApi = createApi({
     endpoints: (build) => ({
         getChats: build.query<any, void>({
             query: () => `ReceiveNotification/${localStorage.getItem('apiTokenInstance')}`,
-            providesTags: ['getChats']
+            providesTags: ['getChats'],
         }),
 
     }),
