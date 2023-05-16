@@ -1,0 +1,1 @@
+export const ApiUrl = `https://api.green-api.com/waInstance${localStorage.getItem('idInstance')}/`

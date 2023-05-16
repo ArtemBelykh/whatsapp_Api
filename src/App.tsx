@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import {Box} from "@mui/material";
+import WriteStorage from "./Components/WriteStorage";
+import LeftPanel from "./Components/LeftPanel";
+import RightPanel from "./Components/RightPanel";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [phone, setPhone] = useState('')
+    return (
+        <>
+            <WriteStorage/>
+
+
+            <Box display="flex" flexDirection="row" height="100vh">
+                <LeftPanel phone={phone} setPhone={setPhone} />
+                <Box
+                    sx={{
+                        border: ".05px solid #2f3b44",
+                    }}
+                />
+                <RightPanel phone={phone} setPhone={setPhone} />
+            </Box>
+
+        </>
+    );
 }
 
 export default App;
